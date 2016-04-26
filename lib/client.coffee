@@ -15,7 +15,6 @@ module.exports = (clientId, secret, baseSite, cb) ->
       request = (action, data, cb) ->
         superagent.post("#{baseSite}/api/#{action}").send(data)
         .set('Authorization', access_token).end (err, res) ->
-          console.log {err, res}
           return cb err if err
           cb null, JSON.parse res.text
 
