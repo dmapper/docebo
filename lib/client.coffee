@@ -6,7 +6,7 @@ superagent = require 'superagent'
 module.exports = (clientId, secret, baseSite, cb) ->
   OAuth2 = OAuth.OAuth2
 
-  oauth2 = new OAuth2 clientId, secret, baseSite, null, 'oauth2/token', null
+  oauth2 = new OAuth2 clientId, secret, baseSite, null, '/oauth2/token', null
 
   oauth2.getOAuthAccessToken '', {grant_type: 'client_credentials'},
     (err, access_token) ->
