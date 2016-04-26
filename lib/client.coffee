@@ -7,7 +7,7 @@ module.exports = (clientId, secret, domain, cb) ->
 
   oauth2.getOAuthAccessToken '', {grant_type: 'client_credentials'},
     (err, access_token, refresh_token, results) ->
+      console.log {err, access_token, refresh_token, results}
       return cb err.message if err
 
-      console.log {err, access_token, refresh_token, results}
       console.log 'bearer: ', access_token
