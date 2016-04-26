@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/dmapper/docebo/issues"
   },
-  "homepage": "https://github.com/dmapper/docebo#readme"
+  "homepage": "https://github.com/dmapper/docebo#readme",
+  "dependencies": {
+    "oauth": "^0.9.14"
+  }
 }
