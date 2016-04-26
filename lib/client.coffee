@@ -12,9 +12,9 @@ module.exports = (clientId, secret, baseSite, cb) ->
 
       console.log {access_token}
 
-      request = (action, data, cb) ->
-        superagent.get("#{baseSite}/api/#{action}").send(data)
-        .set('Authorization', access_token).end (err, res) ->
+      request = (method, action, data, cb) ->
+        superagent[method]("#{baseSite}/api/#{action}").send(data)
+        .set('Authorization', 'Bearer ' + access_token).end (err, res) ->
           return cb err if err
           data = JSON.parse res.text
           if data.success is false
@@ -25,6 +25,6 @@ module.exports = (clientId, secret, baseSite, cb) ->
       cb null, {
         user: {
           create: (data, cb) ->
-            request 'user/create', data, cb
+            request 'post', 'user/create', data, cb
         }
       }
