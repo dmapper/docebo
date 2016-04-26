@@ -10,8 +10,6 @@ module.exports = (clientId, secret, baseSite, cb) ->
     (err, access_token) ->
       return cb err if err
 
-      console.log {access_token}
-
       request = (method, action, data, cb) ->
         superagent[method]("#{baseSite}/api/#{action}").send(data)
         .set('Authorization', 'Bearer ' + access_token).end (err, res) ->
