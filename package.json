@@ -1,0 +1,22 @@
+{
+  "name": "docebo",
+  "version": "0.0.1",
+  "description": "Docebo API library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmapper/docebo.git"
+  },
+  "keywords": [
+    "docebo"
+  ],
+  "author": "Eugene Orekhov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmapper/docebo/issues"
+  },
+  "homepage": "https://github.com/dmapper/docebo#readme"
+}
