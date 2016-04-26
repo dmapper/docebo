@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "http://npm.idecisiongames.com/"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Docebo API library",
   "main": "index.js",
   "scripts": {
