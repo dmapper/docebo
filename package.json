@@ -1,5 +1,8 @@
 {
   "name": "docebo",
+  "publishConfig": {
+    "registry": "http://npm.idecisiongames.com/"
+  },
   "version": "0.0.1",
   "description": "Docebo API library",
   "main": "index.js",
