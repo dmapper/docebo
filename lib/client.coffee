@@ -1,8 +1,6 @@
 OAuth = require 'oauth'
 superagent = require 'superagent'
 
-
-
 module.exports = (clientId, secret, baseSite, cb) ->
   OAuth2 = OAuth.OAuth2
 
@@ -12,12 +10,14 @@ module.exports = (clientId, secret, baseSite, cb) ->
     (err, access_token) ->
       return cb err if err
 
+      console.log {access_token}
+
       request = (action, data, cb) ->
         superagent.post("#{baseSite}/api/#{action}").send(data)
         .set('Authorization', access_token).end (err, res) ->
           console.log {err, res}
           return cb err if err
-          cb null, JSON.parse res
+          cb null, JSON.parse res.text
 
       cb null, {
         user: {
