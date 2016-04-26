@@ -4,7 +4,9 @@
   "description": "Docebo API library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "./node_modules/.bin/coffee --compile .",
+    "postpublish": "find . -name '*.coffee' -type f | grep -v 'node_modules' | sed -e 's/\\.coffee/\\.js/g' | xargs /bin/rm -f"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,8 @@
   "homepage": "https://github.com/dmapper/docebo#readme",
   "dependencies": {
     "oauth": "^0.9.14"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0"
   }
 }
