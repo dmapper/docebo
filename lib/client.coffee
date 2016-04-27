@@ -20,9 +20,10 @@ module.exports = (clientId, secret, baseSite, cb) ->
           cb null, data
 
 
-      cb null, {
-        user: {
+      cb null,
+        user:
           create: (data, cb) ->
             request 'post', 'user/create', data, cb
-        }
-      }
+
+          authenticate: (data, cb) ->
+            request 'post', 'user/authenticate', data, cb
