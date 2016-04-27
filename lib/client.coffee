@@ -27,3 +27,6 @@ module.exports = (clientId, secret, baseSite, cb) ->
 
           authenticate: (data, cb) ->
             request 'post', 'user/authenticate', data, cb
+
+          getToken: (data, cb) ->
+            request 'post', '/user/getToken', data, cb
