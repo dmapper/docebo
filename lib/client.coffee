@@ -37,3 +37,10 @@ module.exports = (clientId, secret, baseSite, cb) ->
 
           assignUsersToNode: (data, cb) ->
             request 'post', 'orgchart/assignUsersToNode', data, cb
+
+        course:
+          courses: (data, cb) ->
+            request 'post', 'course/courses', data, cb
+
+          addUserSubscription: (data, cb) ->
+            request 'post', 'course/addUserSubscription', data, cb
