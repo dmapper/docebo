@@ -38,6 +38,9 @@ module.exports = (clientId, secret, baseSite, cb) ->
           createNode: (data, cb) ->
             request 'post', 'orgchart/createNode', data, cb
 
+          updateNode: (data, cb) ->
+            request 'post', 'orgchart/updateNode', data, cb
+
           assignUsersToNode: (data, cb) ->
             request 'post', 'orgchart/assignUsersToNode', data, cb
 
