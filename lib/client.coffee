@@ -28,6 +28,9 @@ module.exports = (clientId, secret, baseSite, cb) ->
           edit: (data, cb) ->
             request 'post', 'user/edit', data, cb
 
+          delete: (data, cb) ->
+            request 'post', 'user/delete', data, cb
+
           authenticate: (data, cb) ->
             request 'post', 'user/authenticate', data, cb
 
