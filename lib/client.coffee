@@ -59,3 +59,6 @@ module.exports = (clientId, secret, baseSite, cb) ->
 
           addUserSubscription: (data, cb) ->
             request 'post', 'course/addUserSubscription', data, cb
+
+          deleteUserSubscription: (data, cb) ->
+            request 'post', 'course/deleteUserSubscription', data, cb
