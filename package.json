@@ -1,9 +1,6 @@
 {
-  "name": "docebo",
-  "publishConfig": {
-    "registry": "http://npm.idecisiongames.com/"
-  },
-  "version": "0.11.0",
+  "name": "@dmapper/docebo",
+  "version": "1.0.0",
   "description": "Docebo API library",
   "main": "index.js",
   "scripts": {
