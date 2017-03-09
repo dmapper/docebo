@@ -38,10 +38,10 @@ module.exports = (clientId, secret, baseSite, cb) ->
             request 'post', '/user/getToken', data, cb
 
           listUsers: (data, cb) ->
-            request 'post', '/user/listUsers', data, cb
+            request 'post', 'user/listUsers', data, cb
 
           checkUsername: (data, cb) ->
-            request 'post', '/user/checkUsername', data, cb
+            request 'post', 'user/checkUsername', data, cb
 
         orgchart:
           createNode: (data, cb) ->
